@@ -18,6 +18,7 @@ else
     echo DATA environment variable undefined. Where should DATA point to?
     read dataenv
 fi
+
 echo DATA set to $dataenv
 
 # Header
@@ -30,6 +31,8 @@ echo "" >> $rcfile
 echo "" >> $rcfile
 echo "$hdr" >> $rcfile
 echo "" >> $rcfile
+
+echo export DATA=$dataenv >> $rcfile
 
 # the folder in this repository where source files are located
 path=`pwd`/src
