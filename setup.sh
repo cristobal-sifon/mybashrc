@@ -10,20 +10,29 @@ else
     rcfile=~/.bashrc
 fi
 
-path=`pwd`/src
-#echo source $path/environs.src >> $rcfile
+# does the DATA environment exist?
+if [[ ! -z "$DATA" ]]
+then
+    dataenv=$DATA
+else
+    echo DATA environment variable undefined. Where should DATA point to?
+    read dataenv
+fi
+echo DATA set to $dataenv
 
 # Header
 read -r -d '' hdr <<- ENDHEADER
-################
-# Custom setup #
-################
+####################
+# User setup files #
+####################
 ENDHEADER
 echo "" >> $rcfile
 echo "" >> $rcfile
 echo "$hdr" >> $rcfile
 echo "" >> $rcfile
 
+# the folder in this repository where source files are located
+path=`pwd`/src
 
 # Copy files to be sourced
 # environments needs to be copied first!

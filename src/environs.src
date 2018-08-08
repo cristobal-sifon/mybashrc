@@ -1,5 +1,5 @@
 
-export DATA=/scratch/sifon
+#export DATA=/scratch/sifon
 export DOCS=$HOME/Documents
 export CODE=$DATA/code
 export GIT=$DATA/git
