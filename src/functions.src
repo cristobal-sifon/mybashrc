@@ -1,0 +1,1 @@
+function jlab_remote(){ jupyter lab --no-browser --port=$1; }

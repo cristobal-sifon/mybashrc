@@ -1,0 +1,43 @@
+
+export DATA=/scratch/sifon
+export DOCS=$HOME/Documents
+export CODE=$DATA/code
+export GIT=$DATA/git
+export LOCAL=$HOME/.local
+export PYMODULES=$DATA/python-modules
+export SOFTWARE=$HOME/software
+
+export PATH=$LOCAL/bin:$PATH
+export PATH=$DATA/bin:$PATH
+export PATH=$DATA/software/bin:$PATH
+export PATH=$PATH:$DATA/software/fv5.4
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DATA/software/lib
+export LD_LIBRARY_PATH=$LOCAL/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$LOCAL/lib:$LD_LIBRARY_PATH
+
+# these are used by configure to find libraries
+#export CPPFLAGS='-I/u/sifon/.local/include'
+#export LDFLAGS='-L/u/sifon/.local/lib'
+export CPPFLAGS="-I${LOCAL}/include"
+export LDFLAGS="-L${LOCAL}/lib"
+
+# be careful about the preference order
+export PYTHONPATH=$CODE/mycode/python:${PYTHONPATH+}
+export PYTHONPATH=$CODE/external/python:$PYTHONPATH
+export PYTHONPATH=$PYMODULES:$PYTHONPATH
+export PYTHONPATH=$PYTHONPATH:$GIT/ezgal
+export PYTHONPATH=$PYTHONPATH:$GIT/ecgmm/py
+# IPython default configurations
+export jupy=$GIT/jupy
+
+export CONDA=$HOME/anaconda3
+
+# added by Anaconda3 4.3.1 installer
+export PATH="/u/sifon/anaconda3/bin:$PATH"
+
+export iraf=/iraf/iraf/
+export IRAFARCH=linux
+
+# redmonster setup
+export REDMONSTER_TEMPLATES_DIR=$GIT/redmonster/templates

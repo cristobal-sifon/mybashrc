@@ -1,0 +1,22 @@
+alias cosma='ssh -XY dc-sifo1@charon.dur.ac.uk'
+alias jeker='ssh -XY sifon@jeker.strw.leidenuniv.nl'
+alias peumo='ssh -XY sifon@peumo.rutgers.edu'
+alias strw='ssh -XY sifon@ssh.strw.leidenuniv.nl'
+alias tiger='ssh -XY andalaft@tiger.princeton.edu'
+
+alias astroconda='source activate astroconda'
+alias cp='cp -p'
+alias ds9='$DATA/software/SAOImageDS9/bin/ds9'
+alias firefox='~/firefox/firefox'
+alias grep='grep -i'
+alias ipnotebook='jupyter notebook --ip=127.0.0.1'
+alias ipylab='ipython --matplotlib'
+#alias jupyter='jupyter --ip=127.0.0.1'
+#alias jupyter='jupyter --ip=0.0.0.0 --port=8080'
+alias ll='ls -lh'
+alias mendeley='mendeleydesktop'
+alias nano='nano -A -B -E -S -T 4 -k -r 80'
+alias source_cosmosis='source /scratch/sifon/cosmosis/config/setup-cosmosis'
+alias xgterm='xgterm -sb'
+
+function jlab_remote(){ jupyter lab --no-browser --port=$1; }
