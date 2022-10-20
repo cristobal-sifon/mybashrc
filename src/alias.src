@@ -1,14 +1,46 @@
+alias aladin='java -jar $SOFTWARE/Aladin/Aladin.jar'
 alias astroconda='source activate astroconda'
 alias cp='cp -p'
-alias ds9='$DATA/software/SAOImageDS9/bin/ds9'
-alias firefox='~/firefox/firefox'
-alias grep='grep -i'
-alias ipnotebook='jupyter notebook --ip=127.0.0.1'
-alias ipylab='ipython --matplotlib'
-#alias jupyter='jupyter --ip=127.0.0.1'
-#alias jupyter='jupyter --ip=0.0.0.0 --port=8080'
+alias df='df -h'
+alias grep='grep --color=auto'
 alias ll='ls -lh'
+alias ls='ls --color=auto'
 alias mendeley='mendeleydesktop'
-alias nano='nano -A -B -E -S -T 4 -k -r 80'
+alias nano='nano -A -B -E -T 4 -k -r 80'
 alias source_cosmosis="source $DATA/cosmosis/config/setup-cosmosis"
+alias topcat="$SOFTWARE/topcat/topcat"
 alias xgterm='xgterm -sb'
+
+alias selknam='ssh -p 22 -X cristobal@158.251.165.98'
+alias selknam-mount='sshfs -p 22 cristobal@158.251.165.98:/data2/cristobal $SELKNAM_DIR'
+alias selknam-umount='fusermount -u $SELKNAM_DIR'
+alias rsync-selknam="rsync -e 'ssh -p 22'"
+
+alias cosma6='ssh -XY dc-sifo1@login6.cosma.dur.ac.uk'
+alias cosma='ssh -XY dc-sifo1@login7.cosma.dur.ac.uk'
+alias cosma-mount='sshfs dc-sifo1@login7.cosma.dur.ac.uk:/cosma7/data/durham/dc-sifo1/eagle/satellites/hbt $COSMA_DIR'
+alias cosma-umount='fusermount -u $COSMA_DIR'
+
+# NERSC access
+alias sshproxy='$DOCS/nersc/sshproxy.sh -u csifon'
+alias cori='ssh csifon@cori.nersc.gov'
+alias cori-mount='sshfs csifon@cori.nersc.gov:/global/homes/c/csifon $CORI_DIR'
+alias cori-umount='fusermount -u $CORI_DIR'
+alias cori-scratch-mount='sshfs csifon@cori.nersc.gov:/global/cscratch1/sd/csifon $CORI_SCRATCH_DIR'
+alias cori-scratch-umount='fusermount -u $CORI_SCRATCH_DIR'
+# ACT folder
+alias act-mount='sshfs csifon@cori.nersc.gov:/global/project/projectdirs/act/data/ $ACT_DIR'
+alias act-umount='fusermount -u $ACT_DIR'
+# One to rule them all
+alias act='sshproxy && cori-mount && cori-scratch-mount && act-mount && cori'
+
+# Other servers
+alias hippo='ssh -XY sifon@146.239.128.25'
+alias hmrc='ssh -XY hmrc@pppsgnrouter.nottingham.ac.uk'
+alias jeker='ssh -XY sifon@jeker.strw.leidenuniv.nl'
+alias melpomene='ssh -XY sifon@melpomene.astro.princeton.edu'
+alias peumo='ssh -XY sifon@peumo.rutgers.edu'
+alias strw='ssh -XY sifon@ssh.strw.leidenuniv.nl'
+alias yoga='ssh cristobal@10.42.0.1'
+
+alias sudo='sudo '
